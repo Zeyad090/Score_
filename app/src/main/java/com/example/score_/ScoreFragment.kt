@@ -6,20 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+
 import com.example.score_.databinding.FragmentScoreBinding
 
 
 class ScoreFragment : Fragment() {
-    private val viewModel: ScoreFragment by viewModels()
-
-private lateinit var binding: FragmentScoreBinding
+    private val viewModel: ScoreViewModel by viewModels()
+    private lateinit var binding: FragmentScoreBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?) :View {
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentScoreBinding.inflate(inflater, container, false)
-return binding.root
-          }
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
@@ -43,7 +44,7 @@ return binding.root
     }
 
     private fun updateprint() {
-        binding?.print.text=viewModel.reslut.toString
+        binding?.print.text=viewModel.reslutre.toString()
 
     }
 
